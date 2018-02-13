@@ -78,8 +78,8 @@
             <div class="col-md-12">
                 <b><asp:Label ID="lblCategory" runat="server" Text="Category: " ></asp:Label></b>
                 <asp:Label ID="lblCategoryOptional" runat="server" Text="(optional)"></asp:Label> 
-                <asp:CheckBoxList ID="cbCategory" runat="server" BackColor="beige"
-                 ForeColor="black" RepeatColumns="5">
+                <asp:CheckBoxList ID="cbCategory" runat="server" BackColor="beige" ForeColor="black" 
+                    BorderStyle="Solid"  BorderColor="Black" RepeatColumns="6" CellPadding="5" CellSpacing="5">
                     <asp:ListItem>Fiction</asp:ListItem>
                     <asp:ListItem>Non-Fiction</asp:ListItem>
                     <asp:ListItem>AutoBiography</asp:ListItem>
