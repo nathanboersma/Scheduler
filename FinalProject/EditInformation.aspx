@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Add.aspx.cs" Inherits="FinalProject.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EditInformation.aspx.cs" Inherits="FinalProject.EditInformation" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Group Project - Book Inventory</title>
-    <meta name="description" content="Group Project, Book Inventory" />
+    <title>Edit Book Information</title>
+    <meta name="description" content="Group Project, Edit Information" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" /> 
@@ -14,71 +14,71 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div><!--
-        <aside>
-            <div class="col-md-12">
-                <h1><asp:Label ID="lblNavigation" runat="server" Text="Navigation"></asp:Label></h1>
-            </div>
-            <div class="col-md-12 topBtn">
-                <asp:Button ID="btnAdd" runat="server" Text="Add" Width="45%" CssClass="btn btn-success"/>
-            </div>
-            <br />
-            <div class="col-md-12">
-                <asp:Button ID="btnDelete" runat="server" Text="Delete" Width="45%" CssClass="btn btn-success"/>
-            </div>
-            <br />
-            <div class="col-md-12">
-                <asp:Button ID="btnEdit" runat="server" Text="Edit" Width="45%" CssClass="btn btn-success"/>
-            </div>
-            <br />
-            <div class="col-md-12 bottomBtn">
-                <asp:Button ID="btnSearch" runat="server" Text="Search" Width="45%" CssClass="btn btn-success" />
-            </div>
-        </aside>
-        -->
+    <div>
         <div class="col-md-12">
             <h1>
-                <asp:Label ID="lblAdd" runat="server" Text="Add:"></asp:Label>
+                <asp:Label ID="lblEditInfo" runat="server" Text="Edit Information:"></asp:Label>
             </h1>
         </div>
+    <!--This is where the search feature will go... I was thinking of having a textbox with a 
+        dropdown on the right side where we could choose how to search. Title, isbn, Last Name,
+        ?Category? Once the search is completed, it will autofill the information for the other
+        textboxes and the user can edit the information from there. -->
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <b><asp:Label ID="lblEditSearch" runat="server" Text="Search: "></asp:Label></b>
+            </div>
+            <div class="form-group">
+                <div class="col-md-2 col-sm-12 col-xs-12">
+                    <asp:DropDownList ID="dropDownEditSearch" runat="server" CssClass="form-control">
+                        <asp:ListItem Value="ISBN"></asp:ListItem>
+                        <asp:ListItem Value="Title"></asp:ListItem>    
+                        <asp:ListItem Value="Author's Last Name"></asp:ListItem>    
+                    </asp:DropDownList>                                    
+                </div>
+                <div class="col-md-10">
+                    <asp:TextBox ID="textEditSearch" runat="server" CssClass="form-control"></asp:TextBox>
+                </div>    
+                <br />  
+                <br />   
+            </div>             
         <div class="form-group">
             <div class="col-md-12">
-                <b><asp:Label ID="lblTitle" runat="server" Text="Title: "></asp:Label></b>
+                <b><asp:Label ID="lblEditTitle" runat="server" Text="Title: "></asp:Label></b>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
-                                ControlToValidate="textTitle" Dispaly="Dynamic" ErrorMessage="Required" ForeColor="Red"></asp:RequiredFieldValidator>
-            </div>        
+                                ControlToValidate="textEditTitle" Dispaly="Dynamic" ErrorMessage="Required" ForeColor="Red"></asp:RequiredFieldValidator>
+            </div>
             <div class="col-md-12">
-                <asp:TextBox ID="textTitle" runat="server" CssClass="form-control"></asp:TextBox>            
+                <asp:TextBox ID="textEditTitle" runat="server" CssClass="form-control"></asp:TextBox>            
             </div>
         </div>
         <br />
         <div class="form-group">
             <div class="col-md-12">
-                <b><asp:Label ID="lblFirstName" runat="server" Text="Author's First Name: "></asp:Label></b>
+                <b><asp:Label ID="lblEditFirstName" runat="server" Text="Author's First Name: "></asp:Label></b>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
-                                ControlToValidate="textFirstName" Dispaly="Dynamic" ErrorMessage="Required" ForeColor="Red"></asp:RequiredFieldValidator>
+                                ControlToValidate="textEditFirstName" Dispaly="Dynamic" ErrorMessage="Required" ForeColor="Red"></asp:RequiredFieldValidator>
             </div>
             <div class="col-md-12">
-                <asp:TextBox ID="textFirstName" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="textEditFirstName" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
         </div>
         <br />
         <div class="form-group">
             <div class="col-md-12">
-                <b><asp:Label ID="lblLastName" runat="server" Text="Author's Last Name: "></asp:Label></b>
+                <b><asp:Label ID="lblEditLastName" runat="server" Text="Author's Last Name: "></asp:Label></b>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
-                                ControlToValidate="textLastName" Dispaly="Dynamic" ErrorMessage="Required" ForeColor="Red"></asp:RequiredFieldValidator>
+                                ControlToValidate="textEditLastName" Dispaly="Dynamic" ErrorMessage="Required" ForeColor="Red"></asp:RequiredFieldValidator>
             </div>
             <div class="col-md-12">
-                <asp:TextBox ID="textLastName" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="textEditLastName" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
         </div>
         <br />
         <div class="form-group">
             <div class="col-md-12">
-                <b><asp:Label ID="lblCategory" runat="server" Text="Category: " ></asp:Label></b>
-                <asp:Label ID="lblCategoryOptional" runat="server" Text="(optional)"></asp:Label> 
-                <asp:CheckBoxList ID="cbCategory" runat="server" BackColor="beige"
+                <b><asp:Label ID="lblEditCategory" runat="server" Text="Category: " ></asp:Label></b>
+                <asp:Label ID="lblEditCategoryOptional" runat="server" Text="(optional)"></asp:Label> 
+                <asp:CheckBoxList ID="cbEditCategory" runat="server" BackColor="beige"
                  ForeColor="black" RepeatColumns="5">
                     <asp:ListItem>Fiction</asp:ListItem>
                     <asp:ListItem>Non-Fiction</asp:ListItem>
@@ -104,8 +104,8 @@
             <br />
             <div class="form-group">
                 <div class="col-md-12">
-                    <b><asp:Label ID="lblRating" runat="server" Text="Rating: "></asp:Label></b>
-                    <asp:Label ID="lblRatingOptional" runat="server" Text="(optional)"></asp:Label>
+                    <b><asp:Label ID="lblEditRating" runat="server" Text="Rating: "></asp:Label></b>
+                    <asp:Label ID="lblEditRatingOptional" runat="server" Text="(optional)"></asp:Label>
                 </div>
                 <div class="col-md-12">
                     <asp:DropDownList ID="DropDownQuestNum" runat="server" CssClass="form-control">
@@ -127,19 +127,17 @@
             <br />
             <div class="form-group">
                 <div class="col-md-12">
-                    <b><asp:Label ID="lblIsbn" runat="server" Text="ISBN: "></asp:Label></b>
+                    <b><asp:Label ID="lblEditIsbn" runat="server" Text="ISBN: "></asp:Label></b>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" 
-                                ControlToValidate="textIsbn" Dispaly="Dynamic" ErrorMessage="Required" ForeColor="Red"></asp:RequiredFieldValidator>
+                                ControlToValidate="textEditIsbn" Dispaly="Dynamic" ErrorMessage="Required" ForeColor="Red"></asp:RequiredFieldValidator>
                 </div>
                 <div class="col-md-12">
-                    <asp:TextBox ID="textIsbn" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="textEditIsbn" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
             <br />
             <div class="col-md-12">
-                <asp:Button ID="btnSubmit" runat="server" Text="Submit" CssClass="btn btn-primary" OnClick="btnSubmit_Click"/>
-                &nbsp;
-                <asp:Button ID="btnClear" runat="server" Text="Clear" CssClass="btn btn-success" OnClick="btnClear_Click" />
+                <asp:Button ID="btnEditSubmit" runat="server" Text="Submit" CssClass="btn btn-primary" OnClick="btnEditSubmit_Click"/>
             </div>
             <br />
     </div>
