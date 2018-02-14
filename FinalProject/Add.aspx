@@ -99,6 +99,7 @@
                     <asp:ListItem>Textbook</asp:ListItem>
                     <asp:ListItem>Thriller</asp:ListItem>
                 </asp:CheckBoxList>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
                 </div>
             </div>
             <br />
