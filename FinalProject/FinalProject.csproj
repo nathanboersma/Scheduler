@@ -99,6 +99,7 @@
     <Content Include="App_Data\Inventory_log.ldf">
       <DependentUpon>Inventory.mdf</DependentUpon>
     </Content>
+    <Content Include="CurrentReadingList.aspx" />
     <Content Include="EditInformation.aspx" />
     <Content Include="OptionsMenu.aspx" />
     <Content Include="packages.config" />
@@ -136,6 +137,8 @@
     <Content Include="scripts\jquery-3.3.1.min.js" />
     <Content Include="scripts\jquery-3.3.1.slim.js" />
     <Content Include="scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="ViewBookshelf.aspx" />
+    <Content Include="WatchList.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -145,6 +148,13 @@
     </Compile>
     <Compile Include="Add.aspx.designer.cs">
       <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CurrentReadingList.aspx.cs">
+      <DependentUpon>CurrentReadingList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CurrentReadingList.aspx.designer.cs">
+      <DependentUpon>CurrentReadingList.aspx</DependentUpon>
     </Compile>
     <Compile Include="EditInformation.aspx.cs">
       <DependentUpon>EditInformation.aspx</DependentUpon>
@@ -170,6 +180,20 @@
     </Compile>
     <Compile Include="Remove.aspx.designer.cs">
       <DependentUpon>Remove.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewBookshelf.aspx.cs">
+      <DependentUpon>ViewBookshelf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewBookshelf.aspx.designer.cs">
+      <DependentUpon>ViewBookshelf.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WatchList.aspx.cs">
+      <DependentUpon>WatchList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WatchList.aspx.designer.cs">
+      <DependentUpon>WatchList.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
