@@ -38,7 +38,7 @@
         -->
         <div class="col-md-12">
             <h1>
-                <asp:Label ID="lblAdd" runat="server" Text="Add:"></asp:Label>
+                <asp:Label ID="lblAdd" runat="server" Text="Add Inventory:"></asp:Label>
             </h1>
         </div>
         <div class="form-group">
@@ -99,6 +99,7 @@
                     <asp:ListItem>Textbook</asp:ListItem>
                     <asp:ListItem>Thriller</asp:ListItem>
                 </asp:CheckBoxList>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
                 </div>
             </div>
             <br />
