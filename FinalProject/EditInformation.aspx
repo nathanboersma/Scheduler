@@ -24,18 +24,18 @@
         dropdown on the right side where we could choose how to search. Title, isbn, Last Name,
         ?Category? Once the search is completed, it will autofill the information for the other
         textboxes and the user can edit the information from there. -->
-            <div class="col-md-12">
+            <div class="col-md-12 col-sm-12 col-xs-12">
                 <b><asp:Label ID="lblEditSearch" runat="server" Text="Search: "></asp:Label></b>
             </div>
             <div class="form-group">
-                <div class="col-md-2 col-sm-2 col-xs-12">
+                <div class="col-md-2 col-sm-12 col-xs-12">
                     <asp:DropDownList ID="dropDownEditSearch" runat="server" CssClass="form-control">
                         <asp:ListItem Value="ISBN"></asp:ListItem>
                         <asp:ListItem Value="Title"></asp:ListItem>    
                         <asp:ListItem Value="Author's Last Name"></asp:ListItem>    
                     </asp:DropDownList>                                    
                 </div>
-                <div class="col-md-10 col-md-10 col-xs-12">
+                <div class="col-md-10">
                     <asp:TextBox ID="textEditSearch" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>    
                 <br />  
@@ -78,8 +78,8 @@
             <div class="col-md-12">
                 <b><asp:Label ID="lblEditCategory" runat="server" Text="Category: " ></asp:Label></b>
                 <asp:Label ID="lblEditCategoryOptional" runat="server" Text="(optional)"></asp:Label> 
-                <asp:CheckBoxList ID="cbEditCategory" runat="server" BackColor="beige" ForeColor="black" 
-                    BorderStyle="Solid" BorderColor="Black" RepeatColumns="6" CellPadding="5" CellSpacing="5">
+                <asp:CheckBoxList ID="cbEditCategory" runat="server" BackColor="beige"
+                 ForeColor="black" RepeatColumns="5">
                     <asp:ListItem>Fiction</asp:ListItem>
                     <asp:ListItem>Non-Fiction</asp:ListItem>
                     <asp:ListItem>AutoBiography</asp:ListItem>
