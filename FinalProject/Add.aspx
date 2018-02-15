@@ -38,7 +38,7 @@
         -->
         <div class="col-md-12">
             <h1>
-                <asp:Label ID="lblAdd" runat="server" Text="Add:"></asp:Label>
+                <asp:Label ID="lblAdd" runat="server" Text="Add Inventory:"></asp:Label>
             </h1>
         </div>
         <div class="form-group">
