@@ -48,6 +48,9 @@
                     <h4><a href="WatchList.aspx" title="Edit Watch List">Edit Watch List</a></h4>
                 </li>
                 <li>
+                    <h4><a href="CurrentReadingList.aspx" title="Current Reading List">View Current Reading List</a></h4>
+                </li>
+                <li>
                     <h4><a href="ViewBookshelf.aspx" title="View Books">View Bookshelf</a></h4>
                 </li>
             </ul>
