@@ -19,8 +19,30 @@
             <h1>
                 <asp:Label ID="lblViewBooks" runat="server" Text="View Bookshelf:"></asp:Label>
             </h1>
+            <div class="form-group">
+            <%--<asp:Label ID="lblPrducts" runat="server" CssClass="col-md-3 control-label" Text="Products: "></asp:Label>--%>
+            <div >
+                <br />
+                <asp:GridView ID="GridView1" runat="server" AllowPaging="False" AutoGenerateColumns="False" DataKeyNames="Title" DataSourceID="SqlDataSource1" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None" >
+                    <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                    <Columns>
+                        <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
+                        <asp:BoundField DataField="AuthorFName" HeaderText="First Name" SortExpression="Title" />
+                        <asp:BoundField DataField="AuthorLName" HeaderText="Last Name" SortExpression="Title" />
+                        <asp:BoundField DataField="Category" HeaderText="Category" SortExpression="Title" />
+                        <asp:BoundField DataField="Rating" HeaderText="Rating" SortExpression="Title" />
+                    </Columns>                    
+                    <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />                    
+                    <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                    <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />                    
+                </asp:GridView>  
+                <br />
+            </div>
         </div>
-    </div>
+        </div>
+         </div>
+<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IsbnTitleString %>" SelectCommand="SELECT [Title], [AuthorFName], [AuthorLName], [Category], [Rating] FROM [Table]">
+</asp:SqlDataSource>        
     </form>
 </body>
 </html>
