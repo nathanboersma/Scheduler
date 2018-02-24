@@ -14,13 +14,14 @@ aside {
     border: thick black solid;
     padding:1%;
     text-align:center;
-    overflow:no-display;
+    
 }
 
 .container {
     width:79%;
     float:right;
     padding:1%;
+    background-color:beige;
 }
 
 .topBtn {

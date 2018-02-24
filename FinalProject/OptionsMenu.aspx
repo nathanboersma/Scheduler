@@ -28,7 +28,7 @@
             <h1 style="text-align: center; color: blue; font-size: 1.5em;">Book Inventory Options List</h1>
     </header>
 
-    <div class="container" style=" float: left; margin: 0 2%; background-color: white;">
+    <div class="container" style=" float: left; margin: 0 2%; background-color:beige;">
 
         <div>
 
