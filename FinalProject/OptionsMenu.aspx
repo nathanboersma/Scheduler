@@ -28,7 +28,7 @@
             <h1 style="text-align: center; color: blue; font-size: 1.5em;">Book Inventory Options List</h1>
     </header>
 
-    <div class="container" style=" float: left; margin: 0 2%; background-color: white;">
+    <div class="container" style=" float: left; margin: 0 2%; background-color:beige;">
 
         <div>
 
@@ -39,7 +39,7 @@
                     <h4><a href="Add.aspx" title="Add Book">Add a Book</a></h4>
                 </li>
                 <li>
-                    <h4><a href="DeleteBook.aspx" title="Delete Book">Remove a Book</a></h4>
+                    <h4><a href="Remove.aspx" title="Delete Book">Remove a Book</a></h4>
                 </li>
                 <li>
                     <h4><a href="EditInformation.aspx" title="Edit Book">Edit Book Information</a></h4>
