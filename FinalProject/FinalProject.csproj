@@ -115,7 +115,7 @@
     <None Include="BookInventory.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BookInventory.Designer.cs</LastGenOutput>
+      <LastGenOutput>BookInventory1.Designer.cs</LastGenOutput>
     </None>
     <Content Include="BookInventory.xss">
       <DependentUpon>BookInventory.xsd</DependentUpon>

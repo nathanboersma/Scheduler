@@ -175,15 +175,6 @@ namespace FinalProject {
         protected global::System.Web.UI.WebControls.Label lblEditRating;
         
         /// <summary>
-        /// lblEditRatingOptional control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEditRatingOptional;
-        
-        /// <summary>
         /// DropDownQuestNum control.
         /// </summary>
         /// <remarks>

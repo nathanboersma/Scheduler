@@ -104,11 +104,9 @@
             <div class="form-group">
                 <div class="col-md-12">
                     <b><asp:Label ID="lblEditRating" runat="server" Text="Rating: "></asp:Label></b>
-                    <asp:Label ID="lblEditRatingOptional" runat="server" Text="(optional)"></asp:Label>
                 </div>
                 <div class="col-md-12">
                     <asp:DropDownList ID="DropDownQuestNum" runat="server" CssClass="form-control">
-                        <asp:ListItem Value="N/A"></asp:ListItem>
                         <asp:ListItem Value="0"></asp:ListItem>
                         <asp:ListItem Value="0.5"></asp:ListItem>
                         <asp:ListItem Value="1"></asp:ListItem>
@@ -156,7 +154,7 @@
             </div>
             <br />
         <div class="col-md-12">
-            <a href="OptionsMenu.aspx" title="Home">Back to Options</a>
+            <h4><a href="OptionsMenu.aspx" title="Home">Back to Options</a></h4>
             </div>
             <br />
     </div>

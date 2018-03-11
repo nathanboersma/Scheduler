@@ -55,6 +55,8 @@ namespace FinalProject
 
             lbl_result.Text = "Record successfully updated for " + title;
 
+            dropDownEditSearch.DataBind();
+
         }
 
         protected void dropDownEditSearch_SelectedIndexChanged(object sender, EventArgs e)
